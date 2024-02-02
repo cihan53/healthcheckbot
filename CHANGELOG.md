@@ -1,4 +1,16 @@
 # Changelog
+## [0.3.7](https://github.com/cihan53/healthcheckbot/tree/0.3.7) (2024-02-02)
+    New output added. With RestAPI, it can post the states to the desired address.
+    ```yaml
+        outputs:
+          console:
+            provider: healthcheckbot.outputs.ConsoleOutput
+          rest:
+            provider: custom.outputs.RestOutput
+        #    silent: True
+            contentType: text/html
+            rest_host: https://status.hubbox.io/ping/MX9h8pft8_qbAUIv0NZsKw/{watcher_name}
+    ```
 
 ## [0.3.6](https://github.com/Logicify/healthcheckbot/tree/0.3.6) (2021-03-01)
 

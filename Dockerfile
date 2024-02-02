@@ -1,6 +1,6 @@
 FROM python:3.6-alpine
 
-MAINTAINER Dmitry Berezovsky <d@logicify.com>
+MAINTAINER Dmitry Berezovsky <d@logicify.com>,Cihan Ozturk <cihanozturk53@gmail.com>
 
 ARG app_version
 ARG release_date
