@@ -16,7 +16,7 @@ VOLUME /srv/custom
 COPY ./ /srv
 WORKDIR /srv
 
-#CMD healthcheckbot -c "${CONFIG_FILE}" run
+CMD healthcheckbot -c "${CONFIG_FILE}" run
 
 ADD contrib-dependencies.txt /srv/contrib-dependencies.txt
 ADD requirements.txt /srv/requirements.txt
