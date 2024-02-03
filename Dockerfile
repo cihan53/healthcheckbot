@@ -31,7 +31,7 @@ RUN : "${app_version:?Version argument should be set. Use --build-arg=VERSION=0.
     && pip install -r /srv/requirements.txt
 
 USER root
-RUN python3  /srv/healthcheckbot/app.py -c "${CONFIG_FILE}"
+RUN python3  /srv/app.py -c "${CONFIG_FILE}"
 
 LABEL x.healthcheckbot.version="${app_version}" \
       x.healthcheckbot.release-date="${release_date}" \
