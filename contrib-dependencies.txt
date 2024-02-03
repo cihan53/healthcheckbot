@@ -1,2 +1,2 @@
 redis==3.2.1
-psycopg2==2.9.9
+psycopg2==2.9.8
