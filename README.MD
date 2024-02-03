@@ -2,12 +2,7 @@
 
 <h2 align="center">Healthcheck Bot</h2>
 
-[![Build Status](https://travis-ci.org/Logicify/healthcheckbot.svg?branch=master)](https://travis-ci.org/Logicify/healthcheckbot)
-![License](https://img.shields.io/github/license/logicify/healthcheckbot.svg)
-![PyPi](https://img.shields.io/pypi/v/healthcheckbot.svg)
-![Last Commit](https://img.shields.io/github/last-commit/logicify/healthcheckbot.svg)
-[![Requirements Status](https://requires.io/github/Logicify/healthcheckbot/requirements.svg?branch=master)](https://requires.io/github/Logicify/healthcheckbot/requirements/?branch=master)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLogicify%2Fhealthcheckbot.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FLogicify%2Fhealthcheckbot?ref=badge_shield)
+ 
 
 
 
@@ -281,5 +276,4 @@ Dmitry Berezovsky, Logicify (http://logicify.com/)
 This plug-in is licensed under GPLv3. This means you are free to use it even in commercial projects.
 Also note there is no warranty for this free software. Please see the included [LICENSE](LICENSE]) file for details.
 
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLogicify%2Fhealthcheckbot.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FLogicify%2Fhealthcheckbot?ref=badge_large)
+ 
