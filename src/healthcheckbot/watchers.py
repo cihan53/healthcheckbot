@@ -18,8 +18,8 @@ from datetime import datetime, time
 
 import requests
 
-from src.healthcheckbot.common import validators
-from src.healthcheckbot.common.model import WatcherModule, ParameterDef, ValidationReporter
+from healthcheckbot.common import validators
+from healthcheckbot.common.model import WatcherModule, ParameterDef, ValidationReporter
 
 
 class SystemTimeWatcher(WatcherModule):

@@ -18,8 +18,8 @@ from typing import List
 
 import datetime
 
-from src.healthcheckbot.common import validators
-from src.healthcheckbot.common.model import (
+from healthcheckbot.common import validators
+from healthcheckbot.common.model import (
     TriggerModule,
     WatcherModule,
     LoopModuleMixin,
@@ -27,7 +27,7 @@ from src.healthcheckbot.common.model import (
     WatcherResult,
     ValidationError,
 )
-from src.healthcheckbot.common.utils import time_limit
+from healthcheckbot.common.utils import time_limit
 
 
 class SimpleTimerJob:

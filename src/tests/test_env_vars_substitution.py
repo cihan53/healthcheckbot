@@ -17,7 +17,7 @@
 import unittest
 from os import environ
 
-from src.healthcheckbot.common.evaluator import simple_env_evaluator
+from healthcheckbot.common.evaluator import simple_env_evaluator
 
 
 class SimpleEnvSubstitutionTest(unittest.TestCase):

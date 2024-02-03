@@ -23,7 +23,7 @@ from contextlib import contextmanager
 
 from typing import Callable, Optional, Any
 
-from src.healthcheckbot.common.error import ExecutionTimeoutError
+from healthcheckbot.common.error import ExecutionTimeoutError
 
 
 class EvaluatingConfigWrapper(dict, collections.UserDict):

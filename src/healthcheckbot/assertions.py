@@ -17,8 +17,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-from src.healthcheckbot.common import validators
-from src.healthcheckbot.common.model import WatcherAssert, ValidationReporter, ParameterDef
+from healthcheckbot.common import validators
+from healthcheckbot.common.model import WatcherAssert, ValidationReporter, ParameterDef
 
 
 class TitleAssert(WatcherAssert):
