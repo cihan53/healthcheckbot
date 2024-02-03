@@ -18,12 +18,12 @@ import logging
 import time
 from typing import List, Tuple, Type, NamedTuple, Dict
 
-from src.healthcheckbot.common.error import (
+from common.error import (
     InvalidModuleError,
     WatcherRuntimeError,
     OutputRuntimeError,
 )
-from src.healthcheckbot.common.model import (
+from common.model import (
     CliExtension,
     Module,
     TriggerModule,

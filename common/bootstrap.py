@@ -23,11 +23,11 @@ import os
 import yaml
 
 
-from src.healthcheckbot.common.error import ConfigValidationError
-from src.healthcheckbot.common.evaluator import simple_env_evaluator
-from src.healthcheckbot.common.model import Module, WatcherModule
-from src.healthcheckbot.common.core import ApplicationManager
-from src.healthcheckbot.common.utils import EvaluatingConfigWrapper
+from common.error import ConfigValidationError
+from common.evaluator import simple_env_evaluator
+from common.model import Module, WatcherModule
+from common.core import ApplicationManager
+from common.utils import EvaluatingConfigWrapper
 
 logger = logging.getLogger("Bootstrap")
 

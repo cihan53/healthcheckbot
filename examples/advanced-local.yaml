@@ -2,13 +2,13 @@
 app:
   id: mybot-1
   classpath:
-    - D:\PROJELER\github\healthcheckbot\tmp
+    - ./custom
 
 outputs:
   console:
-    provider: healthcheckbot.outputs.ConsoleOutput
+    provider: outputs.ConsoleOutput
   gelf:
-    provider: healthcheckbot.outputs.GelfOutput
+    provider: outputs.GelfOutput
     gelf_host: localhost
     gelf_port: 12201
     gelf_protocol: udp
@@ -21,17 +21,17 @@ outputs:
 
 triggers:
   each_1_minute:
-    provider: healthcheckbot.triggers.SimpleTimer
+    provider: triggers.SimpleTimer
     interval: 60
 
 watchers:
   system_time:
-    provider: healthcheckbot.watchers.SystemTimeWatcher
+    provider: watchers.SystemTimeWatcher
     triggers:
       - each_1_minute
 
   dns_doesnt_exist:
-    provider: healthcheckbot.watchers.HttpRequest
+    provider: watchers.HttpRequest
     url: http://blahblah123blah.com/
     assert_response_time: 2
     assert_status: 200
@@ -39,7 +39,7 @@ watchers:
       - each_1_minute
 
   google_home:
-    provider: healthcheckbot.watchers.HttpRequest
+    provider: watchers.HttpRequest
     url: http://google.com
     assert_response_time: 3
     assert_status: 200
@@ -47,5 +47,5 @@ watchers:
       - each_1_minute
     custom_assertions:
       check_title:
-        provider: healthcheckbot.assertions.TitleAssert
+        provider: assertions.TitleAssert
         expected_title: 'Google'
