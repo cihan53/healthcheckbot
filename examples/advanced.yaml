@@ -2,7 +2,7 @@
 app:
   id: mybot-1
   classpath:
-    - D:\PROJELER\github\healthcheckbot\tmp
+    - ./custom
 
 outputs:
   console:
