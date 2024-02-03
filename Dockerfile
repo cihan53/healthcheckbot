@@ -13,10 +13,7 @@ VOLUME /srv/config
 VOLUME /srv/data
 VOLUME /srv/custom
 
-COPY ./src /srv
-COPY ./custom /src/custom
-
-
+COPY ./ /srv
 WORKDIR /srv
 
 #CMD healthcheckbot -c "${CONFIG_FILE}" run
