@@ -30,9 +30,6 @@ RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
 RUN : "${app_version:?Version argument should be set. Use --build-arg=VERSION=0.0.0}" \
     && pip install -r /srv/requirements.txt
 
-
-RUN ls -la config
-
 USER root
 RUN python3  /srv/healthcheckbot/app.py -c "${CONFIG_FILE}"
 
