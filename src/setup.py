@@ -17,7 +17,7 @@
 from os import path
 from setuptools import setup, find_packages
 
-from healthcheckbot.__version__ import __version__
+from src.healthcheckbot.__version__ import __version__
 
 src_dir = path.abspath(path.dirname(__file__))
 root_dir = path.join(src_dir, '..')

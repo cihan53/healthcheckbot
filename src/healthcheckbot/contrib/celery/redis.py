@@ -14,8 +14,8 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from healthcheckbot.common import validators
-from healthcheckbot.common.model import WatcherModule, ParameterDef, ValidationReporter
+from src.healthcheckbot.common import validators
+from src.healthcheckbot.common.model import WatcherModule, ParameterDef, ValidationReporter
 import redis
 
 

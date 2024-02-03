@@ -20,11 +20,10 @@ import logging
 
 import gc
 
-from healthcheckbot import cli
-from healthcheckbot.common.core import ApplicationManager
-
-from healthcheckbot.common.bootstrap import bootstrap
-from healthcheckbot.common.utils import CLI
+from src.healthcheckbot import cli
+from src.healthcheckbot.common.bootstrap import bootstrap
+from src.healthcheckbot.common.core import ApplicationManager
+from src.healthcheckbot.common.utils import CLI
 
 logger = logging.getLogger("App")
 

@@ -20,7 +20,7 @@ from datetime import datetime
 from decimal import Decimal
 from psycopg2.extras import RealDictCursor
 
-from healthcheckbot.common.model import WatcherModule, ParameterDef
+from src.healthcheckbot.common.model import WatcherModule, ParameterDef
 import psycopg2
 
 

@@ -22,11 +22,11 @@ from typing import Callable, List
 import os
 import yaml
 
-from healthcheckbot.common.core import ApplicationManager
-from healthcheckbot.common.error import ConfigValidationError
-from healthcheckbot.common.evaluator import simple_env_evaluator
-from healthcheckbot.common.model import Module, WatcherModule
-from healthcheckbot.common.utils import EvaluatingConfigWrapper
+from src.healthcheckbot.common.core import ApplicationManager
+from src.healthcheckbot.common.error import ConfigValidationError
+from src.healthcheckbot.common.evaluator import simple_env_evaluator
+from src.healthcheckbot.common.model import Module, WatcherModule
+from src.healthcheckbot.common.utils import EvaluatingConfigWrapper
 
 logger = logging.getLogger("Bootstrap")
 
