@@ -16,7 +16,7 @@ VOLUME /srv/custom
 COPY ./ /srv
 WORKDIR /srv
 
-CMD sh ./healthcheckbot -c "${CONFIG_FILE}" run
+CMD python3 cli.py -c "${CONFIG_FILE}" run
 
 ADD contrib-dependencies.txt /srv/contrib-dependencies.txt
 ADD requirements.txt /srv/requirements.txt
