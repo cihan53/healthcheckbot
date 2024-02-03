@@ -19,7 +19,7 @@ from os import environ
 
 from typing import NamedTuple
 
-from healthcheckbot.common.error import ExpressionEvaluationError
+from src.healthcheckbot.common.error import ExpressionEvaluationError
 
 __ALL__ = ("simple_env_evaluator",)
 

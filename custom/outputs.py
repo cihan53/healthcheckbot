@@ -25,8 +25,8 @@ from requests.packages.urllib3.util.retry import Retry
 
 executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
 
-from healthcheckbot.common import validators
-from healthcheckbot.common.model import (
+from common import validators
+from common.model import (
     OutputModule,
     WatcherModule,
     WatcherResult,

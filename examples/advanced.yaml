@@ -2,11 +2,11 @@
 app:
   id: mybot-1
   classpath:
-    - /tmp
+    - D:\PROJELER\github\healthcheckbot\tmp
 
 outputs:
   console:
-    provider: healthcheckbot.outputs.ConsoleOutput
+    provider: src.healthcheckbot.outputs.ConsoleOutput
   gelf:
     provider: healthcheckbot.outputs.GelfOutput
     gelf_host: localhost

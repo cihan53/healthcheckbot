@@ -19,9 +19,9 @@ import logging
 import collections
 from graypy import GELFHandler, GELFTcpHandler
 
-from healthcheckbot.common import validators
-from healthcheckbot.common.error import ConfigValidationError
-from healthcheckbot.common.model import (
+from src.healthcheckbot.common import validators
+from src.healthcheckbot.common.error import ConfigValidationError
+from src.healthcheckbot.common.model import (
     OutputModule,
     WatcherModule,
     WatcherResult,

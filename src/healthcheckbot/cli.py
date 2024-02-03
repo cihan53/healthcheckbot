@@ -22,10 +22,10 @@ import logging
 import gc
 import os
 
-from healthcheckbot import app
-from healthcheckbot.common import bootstrap
-from healthcheckbot.common.model import CliExtension
-from healthcheckbot.common.utils import CLI
+import app
+from common import bootstrap
+from common.model import CliExtension
+from common.utils import CLI
 
 DEFAULT_CONFIG_LOCATIONS = [
     "./config.yaml",
