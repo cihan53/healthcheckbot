@@ -91,3 +91,4 @@ venv.bak/
 
 # Pyre type checker
 .pyre/
+/examples/advanced-local.yaml
