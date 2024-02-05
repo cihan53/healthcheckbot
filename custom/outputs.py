@@ -90,7 +90,7 @@ def actual_emit(self, record):
     logEntry = self.format(record)
     response = self.session.post(
         replace_keywords(self.url,
-                         {"watcher_name": record.watcher_name, "status": "" if record.checks_passed else "/fail"}),
+                         {"watcher_name": record.watcher_name, "status": "" if record.checks_passed else "fail"}).rstrip("/"),
         data=logEntry)
 
     if not self.silent:
