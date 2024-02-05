@@ -169,8 +169,7 @@ class ApplicationManager:
     def deliver_watcher_result(self, watcher: WatcherModule, watcher_result: WatcherResult):
         for output_name, output in self.__outputs.items():
             try:
-                if output_name in watcher.output:
-                    output.output(watcher, watcher_result)
+                output.output(watcher, watcher_result)
             except Exception as e:
                 raise OutputRuntimeError(
                     'Unable to deliver watcher result via output "{}": {}'.format(output.name, str(e)),

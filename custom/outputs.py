@@ -90,7 +90,10 @@ def actual_emit(self, record):
     logEntry = self.format(record)
     response = self.session.post(
         replace_keywords(self.url,
-                         {"watcher_name": record.watcher_name, "status": "" if record.checks_passed else "fail"}).rstrip("/"),
+                         {
+                             "output_slug": record.output_slug,
+                             "watcher_name": record.watcher_name,
+                             "status": "" if record.checks_passed else "fail"}).rstrip("/"),
         data=logEntry)
 
     if not self.silent:
@@ -150,7 +153,8 @@ class RestOutput(OutputModule):
 
     def output(self, watcher_instance: WatcherModule, watcher_result: WatcherResult):
         data = self.__flatten(watcher_result.to_dict())
-        data.update(dict(tags="healthcheck", watcher_name=watcher_instance.name))
+        data.update(
+            dict(tags="healthcheck", watcher_name=watcher_instance.name, output_slug=watcher_instance.output_slug))
         if len(watcher_result.extra.keys()) > 0 and "extra" in data:
             data.update(self.__flatten(watcher_result.extra))
             del data["extra"]
