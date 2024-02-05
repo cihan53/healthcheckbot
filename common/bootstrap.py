@@ -22,7 +22,6 @@ from typing import Callable, List
 import os
 import yaml
 
-
 from common.error import ConfigValidationError
 from common.evaluator import simple_env_evaluator
 from common.model import Module, WatcherModule
@@ -100,11 +99,11 @@ def load_context_path(application: ApplicationManager):
 
 
 def instantiate_modules_for_section(
-    section_name: str,
-    section_config: dict,
-    application: ApplicationManager,
-    cb: Callable[[ApplicationManager, Module, dict], None] = None,
-    instance_name_prefix="",
+        section_name: str,
+        section_config: dict,
+        application: ApplicationManager,
+        cb: Callable[[ApplicationManager, Module, dict], None] = None,
+        instance_name_prefix="",
 ) -> List[Module]:
     result = []
     for name, module_def in section_config.items():
@@ -156,13 +155,19 @@ def _register_watcher_module(application: ApplicationManager, watcher: WatcherMo
         if trigger is None:
             raise ConfigValidationError("triggers", "Trigger '{}' doesn't exist".format(trigger_name))
         trigger.register_watcher(watcher)
-    assertions = instantiate_modules_for_section(
-        "watchers/{}/custom_assertions".format(watcher.name),
-        module_def.get("custom_assertions", dict()),
-        application,
-        instance_name_prefix=watcher.name + "__",
-    )
+
+    assertions = instantiate_modules_for_section("watchers/{}/custom_assertions".format(watcher.name),
+                                                 module_def.get("custom_assertions", dict()), application,
+                                                 instance_name_prefix=watcher.name + "__",
+                                                 )
     watcher.custom_assertions = assertions
+
+    # output = instantiate_modules_for_section("watchers/{}/output".format(watcher.name),
+    #                                              module_def.get("output", dict()), application,
+    #                                              instance_name_prefix=watcher.name + "__",
+    #                                              )
+
+    watcher.output = list(module_def.get("output", dict()).split(","))
 
 
 def instantiate_outputs(config: dict, application: ApplicationManager):

@@ -88,7 +88,8 @@ class CustomHttpHandler(logging.Handler):
 
 def actual_emit(self, record):
     logEntry = self.format(record)
-    response = self.session.post(replace_keywords(self.url, {"watcher_name": record.watcher_name}), data=logEntry)
+    response = self.session.post(
+        replace_keywords(self.url, {"watcher_name": record.watcher_name, "state": "" if record.checks_passed else "fail" }), data=logEntry)
 
     if not self.silent:
         print(logEntry)
