@@ -162,12 +162,6 @@ def _register_watcher_module(application: ApplicationManager, watcher: WatcherMo
                                                  )
     watcher.custom_assertions = assertions
 
-    # output = instantiate_modules_for_section("watchers/{}/output".format(watcher.name),
-    #                                              module_def.get("output", dict()), application,
-    #                                              instance_name_prefix=watcher.name + "__",
-    #                                              )
-
-    watcher.output = list(module_def.get("output", dict()).split(","))
 
 
 def instantiate_outputs(config: dict, application: ApplicationManager):

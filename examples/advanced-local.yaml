@@ -40,7 +40,6 @@ watchers:
     url: http://blahblah123blah.com/
     assert_response_time: 2
     assert_status: 200
-    output: rest
     triggers:
       - each_1_minute
 
