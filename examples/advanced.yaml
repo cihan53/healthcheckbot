@@ -16,7 +16,7 @@ outputs:
     provider: custom.outputs.RestOutput
     #    silent: True
     contentType: text/html
-    rest_host: https://status.hubbox.io/ping/MX9h8pft8_qbAUIv0NZsKw/{watcher_name}
+    rest_host: https://status.hubbox.io/ping/xxx/{watcher_name}
 
 
 triggers:
