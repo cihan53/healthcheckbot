@@ -169,7 +169,8 @@ class ApplicationManager:
     def deliver_watcher_result(self, watcher: WatcherModule, watcher_result: WatcherResult):
         for output_name, output in self.__outputs.items():
             try:
-                output.output(watcher, watcher_result)
+                if output_name in watcher.output:
+                    output.output(watcher, watcher_result)
             except Exception as e:
                 raise OutputRuntimeError(
                     'Unable to deliver watcher result via output "{}": {}'.format(output.name, str(e)),
@@ -180,10 +181,10 @@ class ApplicationManager:
         self.__logger.info("Initiating shutdown process")
         self.__terminating = True
         for bucket in (
-            self.__watchers,
-            self.__triggers,
-            self.__outputs,
-            self.__watcher_asserts,
+                self.__watchers,
+                self.__triggers,
+                self.__outputs,
+                self.__watcher_asserts,
         ):
             for name, module in bucket.items():
                 try:
